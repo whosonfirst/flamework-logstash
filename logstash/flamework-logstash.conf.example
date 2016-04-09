@@ -1,0 +1,19 @@
+# https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html
+
+# https://www.elastic.co/guide/en/logstash/2.3/plugins-inputs-redis.html
+
+input {
+       redis { data_type =>  "channel" key => "logstash" }
+}
+
+filter {
+
+}
+
+# https://www.elastic.co/guide/en/logstash/2.3/plugins-outputs-redis.html
+
+output {
+       stdout { debug => false debug_format => "json"}
+
+       redis { data_type =>  "channel" key => "debug" }
+}
