@@ -19,6 +19,13 @@ then
     exit 1
 fi
 
+if [ ! -e ${PROJECT}/www/include/lib_uuid.php ]
+then
+    echo "lib_logstash depends on lib_uuid, please install that first from the flamework/extras folder"
+    echo "https://github.com/whosonfirst/flamework"
+    exit 1
+fi
+
 cp ${ROOT}/www/include/*.php ${PROJECT}/www/include/
 
 echo "" >> ${PROJECT}/www/include/config.php
