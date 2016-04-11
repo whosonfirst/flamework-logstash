@@ -12,6 +12,13 @@ then
     exit 1
 fi
 
+if [ ! -e ${PROJECT}/www/include/lib_redis.php ]
+then
+    echo "lib_logstash depends on lib_redis, please install that first"
+    echo "https://github.com/whosonfirst/flamework-redis"
+    exit 1
+fi
+
 cp ${ROOT}/www/include/*.php ${PROJECT}/www/include/
 
 echo "" >> ${PROJECT}/www/include/config.php
