@@ -35,4 +35,6 @@ sudo ln -s ${LOGSTASH}/flamework-logstash.conf /etc/logstash/conf.d/flamework-lo
 
 sudo /etc/init.d/logstash restart
 
+sudo update-rc.d logstash defaults
+
 exit 0
