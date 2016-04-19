@@ -33,8 +33,12 @@ fi
 
 sudo ln -s ${LOGSTASH}/flamework-logstash.conf /etc/logstash/conf.d/flamework-logstash.conf
 
-sudo /etc/init.d/logstash restart
+if [ ! -d /usr/local/logstash ]
+    sudo mkdir /usr/local/logstash
+    sudo chown logstash /usr/local/logstash
+fi
 
+sudo /etc/init.d/logstash restart
 sudo update-rc.d logstash defaults
 
 exit 0
