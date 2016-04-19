@@ -34,6 +34,7 @@ fi
 sudo ln -s ${LOGSTASH}/flamework-logstash.conf /etc/logstash/conf.d/flamework-logstash.conf
 
 if [ ! -d /usr/local/logstash ]
+then
     sudo mkdir /usr/local/logstash
     sudo chown logstash /usr/local/logstash
 fi
