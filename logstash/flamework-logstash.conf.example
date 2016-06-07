@@ -23,7 +23,6 @@ output {
        if [@event] == "offline_tasks" {
               file { path => "/usr/local/logstash/flamework-offline-tasks-%{+YYYY-MM-dd}.txt" "file_mode" => 0640 flush_interval => 0 }
 	      elasticsearch { "index" => "offline_tasks" }
-	      redis { data_type => "channel" key => "notifications" }
        }
 
        if [@event] == "error" {
