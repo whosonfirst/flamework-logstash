@@ -3,4 +3,9 @@
 	$GLOBALS['cfg']['logstash_redis_host'] = 'localhost';
 	$GLOBALS['cfg']['logstash_redis_port'] = 6379;
 
+	$GLOBALS['cfg']['enable_feature_audit_trail'] = false;
+	$GLOBALS['cfg']['audit_trail_elasticsearch_index'] = 'audit_trail';
+	$GLOBALS['cfg']['audit_trail_elasticsearch_host'] = 'localhost';
+	$GLOBALS['cfg']['audit_trail_elasticsearch_port'] = '9200';
+
 	# END OF flamework-logstash stuff

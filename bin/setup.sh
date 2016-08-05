@@ -27,8 +27,9 @@ then
 fi
 
 cp ${ROOT}/www/include/*.php ${PROJECT}/www/include/
+cp ${ROOT}/www/templates/*.php ${PROJECT}/www/templates/
 
 echo "" >> ${PROJECT}/www/include/config.php
-cat ${ROOT}/www/include/config.php.logstash 
+cat ${ROOT}/www/include/config.php.logstash
 
 exit 0
